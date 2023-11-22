@@ -122,31 +122,31 @@ header.fixed  ul li a:hover { color: #f1f1f1;}
 
 .about-content .text {margin-left: 1%;}
 
-.about-content .text h1 {font-size: 3vw; color: #520c0c; margin: 0; /* Ajout pour supprimer la marge autour du titre h1 */}
+.about-content .text h1 {font-size: 3.5vw; color: #520c0c; margin: 0; /* Ajout pour supprimer la marge autour du titre h1 */}
 
-.about-content .text h6 {font-size: 2vw; color: #000000;}
+.about-content .text h6 {font-size: 3vw; color: #000000;}
 
-.about-content .text h6 span {color: #5f641a; font-size: 2vw;}
+.about-content .text h6 span {color: #5f641a; font-size: 3vw;}
 
 .text-suite{margin-left: 2%}
 
-.text-suite p span {color: #5f641a; font-size: 2vw;}
+.text-suite p span {color: #5f641a; font-size: 3vw;}
 
-.text-suite p {color: #838383; font-size: 2vw;}
+.text-suite p {color: #838383; font-size: 3vw;}
 /* End image ski et présentation personelle */
 
 /*info personelle */
 .info-personelle{display: flex; flex-wrap: wrap; margin-top: 5%;}
 
-.list {display: flex; flex-wrap: wrap; border-bottom: 1px solid #838383; margin-left: 2%; font-size: 2vw;}
+.list {display: flex; flex-wrap: wrap; border-bottom: 1px solid #838383; margin-left: 2%; font-size: 3vw;}
 
-.list span{color: #5f641a;font-size: 2vw;}
+.list span{color: #5f641a;font-size: 3vw;}
 
 .network{margin-top: 2%;}
 
-.network p{font-size: 2vw; margin: 2%; color: #838383;}
+.network p{font-size: 3vw; margin: 2%; color: #838383;}
 
-.network p span {font-size: 2vw; color: #5f641a;}
+.network p span {font-size: 3vw; color: #5f641a;}
 
 .network-image a img{width: 5vw; margin-left: 3%; border-radius: 50% ;}
 /*************************************** END ABOUT ME **********************************************/
@@ -157,14 +157,14 @@ header.fixed  ul li a:hover { color: #f1f1f1;}
 
 .annonce-competences{background-color: rgb(9, 152, 247);color: white;display: flex; justify-content: center; align-items: center; height: 5vh; }
 
-.annonce-competences h1{font-size: 3vw;text-align: center;margin: 0;}
+.annonce-competences h1{font-size: 4vw;text-align: center;margin: 0;}
 
 /*Tableau skill */
 .skill {background-color: #f5f5f5;}
 
 .tableau {display: inline-block;text-transform: uppercase;color: black;width: 100vw;align-items: center; margin-left: 1%;}
 
-.tableau h1{font-size: 2vw;}
+.tableau h1{font-size: 2.5vw;}
 
 .skill .filter-button {display: flex; position: relative; display: none;}
 
@@ -217,9 +217,9 @@ th {background-color: #00477e; color: white;}
 
 .projets {display: inline-block;text-transform: uppercase;color: black;width: 100vw;align-items: center; margin-left: 1%;}
 
-.projets h1{font-size: 2vw;}
+.projets h1{font-size: 3vw;}
 
-.portfolio .filter-buttons {display: flex; justify-content: center; font-size: 2vw;}
+.portfolio .filter-buttons {display: flex; justify-content: center; font-size: 3vw;}
 
 .portfolio .filter-buttons ul {list-style: none; display: flex; justify-content :space-between;}
 
@@ -231,7 +231,7 @@ th {background-color: #00477e; color: white;}
 
 .portfolio-gallery .item { display: flex; flex-direction: column; justify-content: space-around; width: 15vw; margin-left: 5%;}
 
-.portfolio-gallery .item  h4{font-size: 1vw; }
+.portfolio-gallery .item  h4{font-size: 3vw; }
 
 .portfolio-gallery .item img {width: 100%; height: 15vw; object-fit: cover; border-radius: 5px; }
 /************************************************** END PROJET ******************************************************/
@@ -246,7 +246,7 @@ th {background-color: #00477e; color: white;}
 
 .veille-technologique {display: flex;text-transform: uppercase;color: black;width: 100vw;align-items: center; margin-left: 1%;}
 
-.veille-technologique h1 {font-size: 2vw;}
+.veille-technologique h1 {font-size: 4vw;}
 
 /* Style pour le bouton */
 #showImageBtn {border-radius: 10%;margin-left: 3%; border:none;background-color: #8ddb8f;color: white;cursor: pointer;}
@@ -257,9 +257,9 @@ th {background-color: #00477e; color: white;}
 /* Style pour la croix de fermeture */
 .close {position: absolute; top: 15px; right: 35px;color: #f1f1f1;font-size: 40px;font-weight: bold;cursor: pointer;}
 
-#news-container {display: grid; grid-template-columns: 1fr 1fr; gap: 2vw;}
+#news-container {display: grid; grid-template-columns: 1fr 1fr; gap: 1vw;}
 
-.news-item {background-color: #f9f9f9; padding: 1%; border: 1px solid #ddd; margin: 1% 2%;  width: auto; max-width: 90%; }
+.news-item {background-color: #f9f9f9; padding: 1%; border: 1px solid #ddd; margin: 1% 2%;  width: auto; max-width: 80%; }
 /************************************************** END veille technologique ******************************************************/
 
 /************************************************** FORMULAIRE *****************************************************/
@@ -271,13 +271,13 @@ th {background-color: #00477e; color: white;}
 
 .titre-contact {display: inline-block;text-transform: uppercase;color: black;width: 100vw;align-items: center; margin-left: 1%;}
 
-.titre-contact h1{font-size: 2vw;}
+.titre-contact h1{font-size: 3vw;}
 
 /*Formulaire de contact*/
 .formulaire-contact{margin-left: 5%; margin-top: 3%; }
 
 /* Étiquette du formulaire */
-label {display: block; font-weight: bold; font-size: 2vw; margin-bottom: 5px;}
+label {display: block; font-weight: bold; font-size: 3vw; margin-bottom: 5px;}
 
 /* Champ de formulaire */
 input[type="text"] {padding: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box; font-size: 16px; margin-bottom: 10px;}
@@ -371,7 +371,7 @@ footer .social a{margin-left: 20%;}
     
   .filter-buttons ul li{margin-top: 10%;}
     
-  /* Mettre les imgae en colonne */
+  /* Mettre les image en colonne */
   .portfolio-gallery {flex-direction: column;}
     
   .portfolio-gallery .item{margin-left: 30%;}

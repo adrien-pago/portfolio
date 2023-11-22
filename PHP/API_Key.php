@@ -1,5 +1,5 @@
 <?php
-$api_key = "secret-khey";
+$api_key = "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";
 
 // Vérifiez que la requête est bien une requête POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

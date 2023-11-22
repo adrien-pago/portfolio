@@ -1,5 +1,5 @@
 // Header Fixed
-window.onscroll = function () {
+window.addEventListener('scroll', function () {
   const docScrollTop = document.documentElement.scrollTop;
 
   if (window.innerWidth > 991) {
@@ -9,7 +9,7 @@ window.onscroll = function () {
           document.querySelector("header").classList.remove("fixed")
       }
   }
-}
+});
 
 ///////Barre de Navigation//////
 // Variable pour stocker le délai
@@ -230,6 +230,17 @@ fetch('/PHP/news.php')
         });
     });
 
+// image code php pour explication de la veille technologique //
+document.addEventListener('DOMContentLoaded', (event) => {
+document.getElementById('showImageBtn').onclick = function() {
+  console.log("Bouton cliqué"); //debug
+  document.getElementById('imagePopup').style.display = 'block';
+}
+
+document.getElementById('closeBtn').onclick = function() {
+    document.getElementById('imagePopup').style.display = 'none';
+}
+}) 
 
 
 

@@ -36,7 +36,7 @@ body {
 /************************ END NAVBAR  **************************/
 
 /*******************  HEADER ********************************/
-header {transition: opacity 0.5s ease; width: 100vw; height: 5vh;
+header {transition: opacity 0.5s ease; width: 100vw; height: 5vh; display: flex;
   position: fixed; /* Pour fixer la barre de navigation en haut de l'écran */
   top: 0; left: 0; border-bottom: 1px solid #423940; padding: 0; display: flex; justify-content: space-between; align-items: center;
   z-index: 100; }
@@ -48,8 +48,7 @@ header.hide { opacity: 0;
 .navbar{ display: flex; height: 5vh; width: 100vw; transition: opacity 0.5s;
   background-color: rgba(9, 152, 247, 0.8); /* Couleur de fond semi-transparente */}
 
-header .brand-name{margin-left: 3%;
-  align-items: center; /* Centrer verticalement le contenu */}
+header .brand-name{margin-left: 3%;align-items: center; display: flex;  height: 100%;}
 
 header .brand-name a {text-decoration: none; font-size: 2vw; font-weight: 600; color: white; text-transform: uppercase; }
 
@@ -101,14 +100,13 @@ header.fixed  ul li a:hover { color: #f1f1f1;}
 .about-me {width: 100vw;}
 
 /*Annonce profil*/
-.annonce-profil{background-color: rgb(9, 152, 247); color: white;}
+.annonce-profil {background-color: rgb(9, 152, 247);color: white;display: flex; justify-content: center; align-items: center; height: 5vh; }
 
-.annonce-profil h1{font-size: 3vw; text-align: center; margin: 0;}
+.annonce-profil h1 {font-size: 3vw;text-align: center;margin: 0;}
 
-.section-title {display: inline-block; text-transform: uppercase; color: black; width: 100vw; align-items: center; margin-left: 1%;}
+.section-title {display: inline-block;text-transform: uppercase;color: black;width: 100vw;align-items: center; margin-left: 1%;}
 
 .section-title h1 {font-size: 2vw;}
-
 
 /* image ski et présentation personelle */
 .about-content{display: flex;}
@@ -157,14 +155,14 @@ header.fixed  ul li a:hover { color: #f1f1f1;}
 /*Annonce Compétence*/
 .skill {width: 100vw;}
 
-.annonce-competences{background-color: rgb(9, 152, 247); color: white; display: flex; }
+.annonce-competences{background-color: rgb(9, 152, 247);color: white;display: flex; justify-content: center; align-items: center; height: 5vh; }
 
-.annonce-competences h1{font-size: 3vw; text-align: center; margin-left: 4%;}
+.annonce-competences h1{font-size: 3vw;text-align: center;margin: 0;}
 
 /*Tableau skill */
 .skill {background-color: #f5f5f5;}
 
-.tableau {display: inline-block; text-transform: uppercase; color: black; margin-left: 1%; width: 100vw; align-items: center;}
+.tableau {display: inline-block;text-transform: uppercase;color: black;width: 100vw;align-items: center; margin-left: 1%;}
 
 .tableau h1{font-size: 2vw;}
 
@@ -208,16 +206,16 @@ th {background-color: #00477e; color: white;}
   /*Annonce projet */
 .portfolio{width: 100vw;}
 
-.annonce-projet{background-color: rgb(9, 152, 247); color: white; display: flex; text-align: center;}
+.annonce-projet{background-color: rgb(9, 152, 247);color: white;display: flex; justify-content: center; align-items: center; height: 5vh; }
 
-.annonce-projet h1{font-size: 3vw; margin-left: 40%;}
- 
+.annonce-projet h1{font-size: 3vw;text-align: center;margin: 0;}
+
  /*Lien Projet */
  th, td, a{text-decoration: none;}
 
 .portfolio {background-color: #f5f5f5;}
 
-.projets {display: inline-block; text-transform: uppercase; color: black; margin-left: 1%; width: 100vw;}
+.projets {display: inline-block;text-transform: uppercase;color: black;width: 100vw;align-items: center; margin-left: 1%;}
 
 .projets h1{font-size: 2vw;}
 
@@ -242,27 +240,27 @@ th {background-color: #00477e; color: white;}
   /*Annonce veille */
 .veille {width: 100vw;}
 
-.annonce-veille{background-color: rgb(9, 152, 247); color: white; display: flex; width: 100vw; text-align: center;}
+.annonce-veille{background-color: rgb(9, 152, 247);color: white;display: flex; justify-content: center; align-items: center; height: 5vh; }
   
-.annonce-veille h1{font-size: 3vw; margin-left: 40%;}
+.annonce-veille h1{font-size: 3vw;text-align: center;margin: 0;}
 
-.veille-technologique {display: inline-block; text-transform: uppercase; color: black; margin-left: 1%; width: 100vw;}
+.veille-technologique {display: inline-block;text-transform: uppercase;color: black;width: 100vw;align-items: center; margin-left: 1%;}
 
 .veille-technologique h1 {font-size: 2vw;}
 
-#news-container {display: grid; grid-template-columns: 1fr 1fr; gap: 20px;}
+#news-container {display: grid; grid-template-columns: 1fr 1fr; gap: 2vw;}
 
-.news-item {background-color: #f9f9f9; padding: 20px; border: 1px solid #ddd;}
+.news-item {background-color: #f9f9f9; padding: 1%; border: 1px solid #ddd; margin: 1% 2%;  width: auto; max-width: 90%; }
 /************************************************** END veille technologique ******************************************************/
 
 /************************************************** FORMULAIRE *****************************************************/
 .contact-us{width: 100vw;}
 
-.message-text {background-color: rgb(9, 152, 247); color: white; display: flex;}
+.message-text {background-color: rgb(9, 152, 247);color: white;display: flex; justify-content: center; align-items: center; height: 5vh; }
 
-.message-text h1 {font-size: 3vw; margin-left: 10%;}
+.message-text h1 {font-size: 3vw;text-align: center;margin: 0}
 
-.titre-contact {display: inline-block; text-transform: uppercase; color: black; margin-left: 1%; width: 100vw;}
+.titre-contact {display: inline-block;text-transform: uppercase;color: black;width: 100vw;align-items: center; margin-left: 1%;}
 
 .titre-contact h1{font-size: 2vw;}
 
@@ -376,6 +374,25 @@ footer .social a{margin-left: 20%;}
 
   /* Modifier la mise en page de la section "Veille" */
   .veille-technologique h1{text-align: center;}
+
+  .annonce-veille h1 {
+    font-size: 3vw; /* Ajuster la taille de la police pour les petits écrans */
+    margin-left: 10%; /* Ajuster la marge */
+  }
+
+  .veille-technologique h1 {
+      font-size: 2vw; /* Ajuster la taille de la police pour les petits écrans */
+  }
+
+  #news-container {
+      display: grid;
+      grid-template-columns: 1fr; /* Afficher les éléments en une seule colonne */
+      gap: 1vw;
+  }
+
+  .news-item {
+    padding: 1%; border: 1px solid #ddd; margin: 1% 2%;  width: auto; max-width: 90%; 
+  }
 
   /* Modifier la mise en page de la section "formulaire" */
   .titre-contact h1{text-align: center;}

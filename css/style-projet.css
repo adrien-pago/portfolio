@@ -1,82 +1,80 @@
 body {
-    width: 98vw;
-    height: 200vh;
-    display: flex;
-    color: black;
-    flex-direction: column;
-    align-items: center;
-    background-image: url('/image/background/background_white_carreau.avif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
+  width: 98vw;
+  height: 200vh;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(177, 147, 147, 0.8);
+}
+
+h1 {
+  text-align: center;
   
-  h1 {
-    text-align: center;
-    
-  }
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
   
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  
-  .context {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  }
-  
-  h2{
-    color: rgb(160, 100, 219);
-    margin-top: 20px;
-    margin-bottom: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.context {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+h2{
+  color: rgb(89, 5, 173);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+/*image et balise h3 effet*/
+.image {
+  display: flex;
+  flex-direction: column; /* ajouter la direction de la colonne */
+  align-items: center;
+  margin-top: 50px;
   }
 
-  p {
-    margin: 0;
-  }
+.image h3 {
+  font-size: 16px;
+  color: rgb(89, 5, 173);
+}
 
-  /*image et balise h3 effet*/
-  .image {
-    display: flex;
-    flex-direction: column; /* ajouter la direction de la colonne */
-    align-items: center;
-    margin-top: 50px;
-    }
-  
-  .image h3 {
-    font-size: 16px;
-    color: blueviolet;
-  }
+.image img {
+  max-width: 300px;
+  max-height: 200px;
+  margin-top: 10px;
+  object-fit: contain;
+  transform: scale(1.1);
+  transition: transform 0.3s, opacity 0.3s; /* ajouter la transition d'opacité */
+}
 
-  .image img {
-    max-width: 300px;
-    max-height: 200px;
-    margin-top: 10px;
-    object-fit: contain;
-    transform: scale(0.8);
-    transition: transform 0.3s, opacity 0.3s; /* ajouter la transition d'opacité */
-  }
-  
-  .transparent {
-    opacity: 0.5;
-    pointer-events: none;
-    transition: opacity 0.3s; /* ajouter la transition d'opacité */
-  }
+.transparent {
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.3s; /* ajouter la transition d'opacité */
+}
 
- .image img:hover {
-    transform: scale(3);
-    opacity: 1; /* rendre l'image survolée complètement opaque */
-  }
-  
+.image img:hover {
+  transform: scale(4.5);
+  opacity: 1; /* rendre l'image survolée complètement opaque */
+}

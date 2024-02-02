@@ -11,7 +11,7 @@ window.addEventListener('scroll', function () {
   }
 });
 
-///////Barre de Navigation//////
+///////  Barre de Navigation   //////
 // Variable pour stocker le délai
 let navbarTimeout;
 let lastScrollTop = 0; // Variable pour stocker la position de défilement précédente
@@ -102,18 +102,46 @@ window.addEventListener('load', () => {
 })
 
 ///////////////SKILL////////////////////
-// gestion entre tableauy Skill ET PDF
+// Gestion entre tableau de compétences et section PDF
 document.getElementById('btn-pdf').addEventListener('click', function() {
-  document.getElementById('pdf-section').classList.add('show');
-  document.getElementById('tableau-section').classList.remove('show');
-  document.querySelector('.filter-button').style.display = 'none'; 
+ 
+  // Initialement, on masque la section tableau et on affiche la section pour la liste des fichiers
+  document.getElementById('tableau-section').style.display = 'none';
+  document.querySelector('.filter-button').style.display = 'none';
+  
+  // Appel AJAX pour récupérer la liste des fichiers
+  fetch('/PHP/list-files.php')
+      .then(response => {
+          return response.json();
+      })
+      .then(files => {
+          const fileList = document.getElementById('file-list');
+          fileList.innerHTML = ''; // Nettoie la liste précédente
+          files.forEach(file => {
+              const filePath = '/assets/Epreuve-E5/' + file;
+              const listItem = document.createElement('li');
+              const link = document.createElement('a');
+              link.href = filePath;
+              link.textContent = file;
+              link.target = '_blank'; // Pour ouvrir dans un nouvel onglet
+              listItem.appendChild(link);
+              fileList.appendChild(listItem);
+          });
+          // Affichage de la section de liste des fichiers
+          document.getElementById('file-list-section').style.display = 'block';
+      })
+      .catch(error => console.error('Erreur lors de la récupération des fichiers:', error));
 });
 
 document.getElementById('btn-tableau').addEventListener('click', function() {
-  document.getElementById('pdf-section').classList.remove('show');
-  document.getElementById('tableau-section').classList.add('show');
-  document.querySelector('.filter-button').style.display = 'block'; 
+
+  // Masquer la section de la liste des fichiers et afficher la section tableau des compétences
+  document.getElementById('file-list-section').style.display = 'none';
+  document.getElementById('pdf-section').style.display = 'none';
+  document.getElementById('tableau-section').style.display = 'block';
+  document.querySelector('.filter-button').style.display = 'block';
 });
+
 
 //Animation Tableau SKill
 // Récupération de la liste des éléments de la liste de filtre
@@ -148,7 +176,7 @@ filterBtns[i].addEventListener('click', function() {
 
 
 ///////////////////projet///////////////////////////
-//Affiche les projets en fonction de filter_bts
+////// Affiche les projets en fonction de filter_bts
 const filterButtons = document.querySelector("#filter-btns").children;
 const items = document.querySelector(".portfolio-gallery").children;
 
@@ -160,16 +188,18 @@ for (let i = 0; i < filterButtons.length; i++) {
       this.classList.add("active");
       const targets = this.getAttribute("data-targets")
       for (let k = 0; k < items.length; k++) {
-        items[k].style.display = "none";  // Modifiez cette ligne
+        items[k].style.display = "none";  
         if (targets == items[k].getAttribute("data-ids")) {
-            items[k].style.display = "flex";  // Modifiez cette ligne
+            items[k].style.display = "flex";  
         }
         if (targets == "all") {
-            items[k].style.display = "flex";  // Modifiez cette ligne
+            items[k].style.display = "flex";  
         }
       }    
   })
 }
+
+
 
 //fonction aggrandir image
 function agrandirImage() {

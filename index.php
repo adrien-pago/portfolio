@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="multipart/form-data">
+  <link rel="stylesheet" href="css/style.css">
+  <title>portfolio</title>
+  
+</head>
+
+<body>
+
+  <!--Start HOME-->
+  <section class="home" id="home">
+    <!--Start HEADER-->
+    <header>
+      <nav class="navbar">
+        <div class="brand-name">
+          <a href="#home" class="logo">Adrien Pago</a>
+        </div>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#projet">Projets</a></li>
+		      <li><a href="#veille">Veille</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#C3PO">C3PO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--End HEADER-->
+    <div class="home-content">
+      <div class="block">
+        <h1>Rien n'est impossible pour un développeur motivé!</h1>
+        <div class="cv-btn">
+          <a href="/assets/CV Adrien PAGO.pdf" download="Adrien Pago BTS SIO.pdf">Télécharger le CV</a>
+        </div>
+      </div>
+    </div>
+    <ul class="medias">
+        <li class="bulle"><img src="/image/Logo/linkedin.png" class="logo-medias"></li>
+        <li class="bulle"><img src="/image/Logo/instagram.png" class="logo-medias"></li>
+        <li class="bulle"><img src="/image/Logo/logo-twitter.png" class="logo-medias"></li>
+        <li class="bulle"><img src="/image/Logo/whatsapp.png" class="logo-medias"></li>
+        <li class="bulle"><img src="/image/Logo/git-noir.png" class="logo-medias"></li>
+      </ul>
+  </section>
+  <!--End HOME-->
+
+  <!--Start ABOUT-->
+  <section class="about-me" id="profil">
+    <section class="annonce-profil">
+      <h1>Résumé de mon profil</h1>
+    </section>
+    <div class="section-title">
+      <h1><span class="half-underline">Profil</span></h1>
+    </div>
+    <div class="about-content">
+      <div class="img">
+        <img src="/image/personelle/ski-zoom.jpg"> 
+      </div>
+      <div class="text">
+        <h1>Adrien PAGO</h1>
+        <h6>Je suis étudiant dans le BTS <span>S</span>ervice <span>I</span>nformatique aux <span>O</span>rganisations option<span> SLAM</span>.</h6>
+      </div>
+    </div>
+      <div class="text-suite">
+        <p>Je poursuis mon cursus scolaire à Agen, dans le <span> 47</span> avec le lycé l'Hermitage. </p>
+        <p>En alternance, je travail donc aussi en tant que développeur junior au sein du conseil départemental. </p>
+        <p>Je vais vous présenter mes différents projets que j'ai pu réaliser tout au long de mes années d'études. </p>
+        <p> <span> Bonne lecture .</span> </p>
+      </div>
+    </div>
+    <div class="info-personelle">
+      <div class="list">
+        <p><span> Linkedin :</span>  Adrien Pago</p>
+      </div>
+      <div class="list">
+        <p><span> Email:</span>  adrien.pago@gmail.com</p>
+      </div>
+      <div class="list">
+        <p><span> Github:</span>  adrien-pago</p>
+      </div>
+    </div>
+    <!--Réseaux sociaux-->
+    <div class="network">
+      <p>Vous pouvez me concater par <span>email</span>, retrouver mon profil sur <span>Linkedin </span> ou voir mes projets personelles sur <span>Github</span> en cliquant sur les logos ci-dessous </p>
+    </div> 
+    <div class="network-image">
+      <a href="mailto:adrien.pago@gmail.com"><img src="/image/Logo/e-mail.png"></a>
+      <a href="https://www.linkedin.com/in/adrien-pago-0642b5249/"><img src="/image/Logo/linkedin.png"></a>
+      <a href="https://github.com/adrien-pago"><img src="/image/Logo/git-violet.png"></a>                
+    </div>  
+  </section>
+  <!--End ABOUT-->
+
+  <!--Start Skills-->
+  <section class="skill">
+    <section class="annonce-competences" id="competences"><!--Annonce Compétences-->
+        <h1>Le savoir / Le savoir-faire / Le savoir-être </h1>
+    </section>  <!-- End annonce Compétence-->
+    <div class="tableau">
+      <h1><span class="half-underline">Mes Compétences</span></h1>
+    </div>
+    <div class="toggle-buttons">
+      <button id="btn-pdf">PDF</button>
+      <button id="btn-tableau">Tableau de mes compétences</button>
+  </div>
+  <div class="file-list-section" id="file-list-section" style="display:none;">
+    <h2>Fichiers disponibles</h2>
+    <ul id="file-list"></ul> <!-- La liste des fichiers sera insérée ici -->
+</div>
+    <div class="filter-button">
+      <ul id="filter-btn" class="filter-list">
+        <li class="active" data-target="all">ALL</li>
+        <li data-target="Support">Support Informatique</li>
+        <li data-target="Specialite">Spécialité Informatique</li>
+        <li data-target="Cyber">Cyber Sécurité</li>
+      </ul>
+    </div>
+    <div class="tableau-skill" id="tableau-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Compétence</th>
+            <th>Module</th>
+            <th>Projet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- START Support -->
+          <tr data-id="Support">
+            <td>Gérer le patrimoine informatique</td>
+            <td>UNITÉ U4 Support et mise à disposition de services informatiques</td>
+            <td><a href ="./HTML/AS.html" target="_blank">Projet-AS</a> </td>
+          </tr>
+          <tr data-id="Support">
+            <td>Répondre aux incidents et aux demandes d’assistance et d’évolution</td>
+            <td>UNITÉ U4 Support et mise à disposition de services informatiques</td>
+            <td><a href ="./HTML/AS.html" target="_blank">Projet-AS</a> </td>
+          </tr>
+          <tr data-id="Support">
+            <td>Développer la présence en ligne de l’organisation</td>
+            <td>UNITÉ U4 Support et mise à disposition de services informatiques</td>
+            <td><a href ="./HTML/GDIN.html" target="_blank">Projet-GDIN</a> </td>
+          </tr>
+          <tr data-id="Support">
+            <td>Travailler en mode projet</td>
+            <td>UNITÉ U4 Support et mise à disposition de services informatiques</td>
+            <td><a href ="./HTML/AS.html" target="_blank">Projet-AS</a> </td>
+          </tr>
+          <tr data-id="Support">
+            <td>Mettre à disposition des utilisateurs un service informatique</td>
+            <td>UNITÉ U4 Support et mise à disposition de services informatiques</td>
+            <td><a href ="./HTML/AS.html" target="_blank">Projet-AS</a> </td>
+          </tr>
+          <tr data-id="Support">
+            <td>Organiser son développement professionnel</td>
+            <td>UNITÉ U4 Support et mise à disposition de services informatiques</td>
+            <td><a href ="./HTML/vps.html" target="_blank">Projet-VPS</a> </td>
+            <!-- END Support -->
+            <!-- START SLAM -->
+          </tr>
+          <tr data-id="Specialite">
+            <td>Conception et développement d’une solution applicative</td>
+            <td>UNITÉ U5 Option « Solutions logicielles et applications métiers » </td>
+            <td><a href ="./HTML/AS.html" target="_blank">Projet-AS</a> </td>
+          </tr>
+          <tr data-id="Specialite">
+            <td>Maintenance corrective ou évolutive d’une solution applicative</td>
+            <td>UNITÉ U5 Option « Solutions logicielles et applications métiers » </td>
+            <td><a href ="./HTML/GDIN.html" target="_blank">Projet-GDIN</a> </td>
+          </tr>
+          <tr data-id="Specialite">
+            <td>Gestion des données</td>
+            <td>UNITÉ U5 Option « Solutions logicielles et applications métiers » </td>
+            <td><a href ="./HTML/AS.html" target="_blank">Projet-AS</a> </td>
+          </tr>
+           <!-- END SLAM -->
+          <!-- START Cyber -->
+          <tr data-id="Cyber">
+            <td>Protection des données à caractère personnel</td>
+            <td>UNITÉ U6 Option « Solutions logicielles et applications métiers »Cybersécurité des services informatiques</td>
+            <td><a href="/assets/TP_CYBER/TP-Données-Personnelles-Adrien-Pago.pdf" target="_blank">TP-1</a>
+                <a href="/assets/TP_CYBER/TP-PIA-Adrien-Pago.docx.pdf" target="_blank">TP-2</a></td>
+            </tr>
+          <tr data-id="Cyber">
+            <td>Préservation de l'identité numérique de l’organisation</td>
+            <td>UNITÉ U6 Option « Solutions logicielles et applications métiers »Cybersécurité des services informatiques</td>
+            <td><a href="/assets/TP_CYBER/TP_2_Preuve_Electronique_Adrien_Pago.pdf" target="_blank">TP-1</a> </td>
+          </tr>
+          <tr data-id="Cyber">
+            <td>Sécurisation des équipements et des usages des utilisateurs</td>
+            <td>UNITÉ U6 Option « Solutions logicielles et applications métiers »Cybersécurité des services informatiques</td>
+          </tr>
+          <tr data-id="Cyber">
+            <td>Garantie de la disponibilité, de l’intégrité et de la confidentialité des services informatiques et des données de l’organisation face à des cyberattaques</td>
+            <td>UNITÉ U6 Option « Solutions logicielles et applications métiers »Cybersécurité des services informatiques</td>
+          </tr>  
+          <tr data-id="Cyber">
+            <td>Cybersécurisation d’une solution applicative et de son développement</td>
+            <td>UNITÉ U6 Option « Solutions logicielles et applications métiers »Cybersécurité des services informatiques</td>
+          </tr>
+           <!-- END Cyber -->          
+        </tbody>
+      </table>
+    </div>
+    <div class="pdf-section" id="pdf-section">
+      <iframe src="/assets/Epreuve-E5/Epreuve E5 - Expression du besoin et correctifs.pdf" id="pdf-frame"></iframe>
+  </div>
+
+  </section>
+<!--End Skils-->
+ 
+<!--Start Projet-->
+  <section class="portfolio" >  
+    <section class="annonce-projet" id="projet">  <!--Annonce projet-->
+        <h1>Mes Projets</h1>
+    </section> <!-- fin Annonce projet-->
+    <div class="projets">
+      <h1><span class="half-underline">Projets</span></h1>
+    </div>
+    <div class="filter-buttons">
+      <ul id="filter-btns">
+        <li class="active" data-targets="all">ALL</li>
+        <li data-targets="logiciel">Logiciel</li>
+        <li data-targets="reseau">Réseaux</li>
+        <li data-targets="jeux">Jeux</li>
+        <li data-targets="web">Web</li>
+        <li data-targets="Mobile">Mobile</li>
+      </ul>
+      <button class="hamburger">&#9776;</button>  <!-- Ajoutez un bouton burger pour le menu -->
+    </div>
+    <div class="portfolio-gallery">
+      <div class="item" data-ids="logiciel">
+        <div class="inner">
+          <img src="/image/Logo/image-windev.png" data-page ="./HTML/projet-decoupeur.html"> 
+          <h4>Découpeur de fichier XML sur WINDEV</h4>
+        </div>
+      </div>
+      <div class="item" data-ids="logiciel">
+        <div class="inner">
+          <img src="image/Image_projet_AS/fen_gestion_AS.PNG" data-page="./HTML/AS.html">
+          <h4>Développer une application pour les agents du département qui traitre les aides sociales</h4>
+        </div>
+      </div>
+      <div class="item" data-ids="reseau">
+        <div class="inner">
+          <img src="/image/Logo/vps.svg" data-page ="./HTML/vps.html">
+          <h4>Utilisation d'un VPS</h4>
+        </div>
+      </div>
+      <div class="item" data-ids="jeux">
+        <div class="inner">
+          <img src="/image/Logo/conan_bot_shop.png" data-page="./HTML/bot-shop.html">
+          <h4>Coder un bot en python, et le synchroniser avec discord et un jeu en ligne</h4>
+        </div>
+      </div>
+      <div class="item" data-ids="web">
+        <div class="inner">
+          <img src="image/CN_image/page_acceuille.PNG" data-page="./HTML/GDIN.html">
+          <h4>Apporter des modifications sur une application déjà créé et la maintenir à jours</h4>
+        </div>
+      </div>
+      <div class="item" data-ids="web">
+        <div class="inner">
+          <img src="/image/Logo/family-games_page-compte.PNG" data-page="./HTML/projet-pago-family-games.html">
+          <h4>Développer une plateforme pour jouer aux jeux de société en ligne</h4>
+        </div>
+    </div>
+    <div class="item" data-ids="logiciel web reseau">
+      <div class="inner">
+        <img src="/image/Vaca_Meet/Page1_Vaca_Mee_Web.PNG" data-page="./HTML/Vaca-Meet-Application-Web.html">
+        <h4>Développer une application web pour les campings</h4>
+      </div>
+    </div>
+    <div class="item" data-ids="Mobile reseau">
+      <div class="inner">
+        <img src="/image/Vaca_Meet/Ecran1_mobile.PNG" data-page="./HTML/Vaca-Meet-Application-Mobile.html">
+        <h4>Développer une application mobile pour les vacanciers </h4>
+      </div>
+  </div>
+  </section>
+<!--End Projet-->
+
+<!--Veille technologique-->
+<section class="veille">  
+  <section class="annonce-veille" id="veille">
+      <h1>Veille technologique</h1>
+    </div>
+  </section>  <!-- fin Annonce veuille-->
+  <div class="veille-technologique">
+    <h1><span class="half-underline">Ma Veille Technologique</span></h1>
+    <button id="showImageBtn">Code</button> <!-- Bouton pour afficher l'image -->
+    <div id="imagePopup" class="image-popup"> <!-- Structure pour l'image agrandie -->
+        <span id="closeBtn" class="close">&times;</span>
+        <img src="/image/code_news-php.png" alt="Image agrandie">
+    </div>
+  </div>
+  <div id="news-container">
+    <!-- Les actualités seront insérées ici par JavaScript -->
+</div>
+
+</section>
+<!-- END Veille technologique-->
+
+
+<!-- formulaire -->
+  <section class="contact-us" >
+    <section class="message-text" id="contact"><!-- Start Message -->
+      <h1>Motivé et déterminé, j'aime relever de nouveaux challenges</h1>
+    </section>  <!-- End Message -->
+      <div class="titre-contact">
+        <h1><span class="half-underline">Contact</span></h1> 
+      </div>
+      <div class = "formulaire-contact" >
+        <form method="post" action="/PHP/formulaire.php">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required>
+          <br>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required>
+          <br>
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" rows="5" required></textarea>
+          <br>
+          <input type="submit" value="Envoyer" class="bouton-envoyer" name="submit">
+      </form>
+    </div>
+    
+    <footer>   <!--Start Footer-->
+      <div class="logo">
+        <h1>Liens :</h1>
+      </div>
+      <div class="social">
+        <a href="mailto:adrien.pago@gmail.com"><img src="/image/Logo/e-mail.png"></a>
+        <a href="https://www.linkedin.com/in/adrien-pago-0642b5249/"><img src="/image/Logo/linkedin.png"></a>
+        <a href="/Milo/index.html"><img src="/assets/question.jpg" alt="Calculateur de jours" title="Calculateur de jours"></a>
+      </div>
+    </footer>   <!--End Footer-->
+      
+    <section class="copyright"> <!--Copyright-->
+      <div class="container">
+        <p>&copy;  copyright Adrien PAGO</p>
+      </div>
+    </section>
+</section>
+
+<!-- C3PO -->
+<!-- Code HTML pour le bouton du chatbot -->
+<div class="chatbot-button" id="chatbotButton">
+  <img src="/image/C3PO.png" alt="Chatbot">
+</div>
+
+<!-- Code HTML pour la boîte de dialogue du chatbot -->
+<div class="chatbot-dialog" id="chatbotDialog">
+  <div class="chat-container" id="chatContainer">
+    <!-- Les messages de la conversation seront affichés ici -->
+  </div>
+  <input type="text" id="userInput" placeholder="Je suis C3PO , écrivez moi votre question ici">
+  <button id="sendMessageButton">Envoyer</button>
+  <button id="closeButton" id="closeButton" >Fermer</button> <!-- Assurez-vous que cet élément existe -->
+</div>
+<!-- CEND C3PO -->
+
+<!--Script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script> <!-- Pour les animation home-->
+<script src="/js/script_index.js"></script>
+<script src="/js/C3PO.js"></script>
+</body>
+
+</html>

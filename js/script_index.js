@@ -176,28 +176,31 @@ filterBtns[i].addEventListener('click', function() {
 
 
 ///////////////////projet///////////////////////////
-////// Affiche les projets en fonction de filter_bts
+// Affiche les projets en fonction des filtres sélectionnés
 const filterButtons = document.querySelector("#filter-btns").children;
 const items = document.querySelector(".portfolio-gallery").children;
 
 for (let i = 0; i < filterButtons.length; i++) {
   filterButtons[i].addEventListener("click", function () {
-      for (let j = 0; j < filterButtons.length; j++) {
-          filterButtons[i].classList.remove("active")
+    // Supprime la classe active de tous les boutons de filtre
+    for (let j = 0; j < filterButtons.length; j++) {
+      filterButtons[j].classList.remove("active");
+    }
+    this.classList.add("active"); // Ajoute la classe active au bouton de filtre sélectionné
+    const targets = this.getAttribute("data-targets").split(" "); // Sépare les catégories cibles en une liste
+
+    // Parcours tous les éléments et les affiche ou les masque en fonction des catégories cibles
+    for (let k = 0; k < items.length; k++) {
+      items[k].style.display = "none";
+      const projectCategories = items[k].getAttribute("data-ids").split(" "); // Récupère les catégories du projet en cours
+      // Vérifie si le projet correspond à au moins l'une des catégories cibles ou si "all" est sélectionné
+      if (targets.includes("all") || targets.some(target => projectCategories.includes(target))) {
+        items[k].style.display = "flex";
       }
-      this.classList.add("active");
-      const targets = this.getAttribute("data-targets")
-      for (let k = 0; k < items.length; k++) {
-        items[k].style.display = "none";  
-        if (targets == items[k].getAttribute("data-ids")) {
-            items[k].style.display = "flex";  
-        }
-        if (targets == "all") {
-            items[k].style.display = "flex";  
-        }
-      }    
-  })
+    }
+  });
 }
+
 
 
 

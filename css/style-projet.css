@@ -13,11 +13,6 @@ body {
   background-color: rgba(177, 147, 147, 0.8);
 }
 
-h1 {
-  text-align: center;
-  
-}
-
 button {
   background-color: #4CAF50;
   color: white;
@@ -38,15 +33,24 @@ button {
   margin-top: 50px;
 }
 
-h2{
-  color: rgb(89, 5, 173);
-  margin-top: 20px;
-  margin-bottom: 10px;
+h1 {
+  text-align: center;
+  font-size: 4vw;
 }
 
-p {
-  margin: 0;
+h2{
+  color: rgb(89, 5, 173);
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 3vw;
 }
+
+h4{
+  color: rgb(0, 0, 0);
+  font-size: 2vw;
+  text-align:left
+}
+
 
 /*image et balise h3 effet*/
 .image {
@@ -57,7 +61,7 @@ p {
   }
 
 .image h3 {
-  font-size: 16px;
+  font-size: 3vw;
   color: rgb(89, 5, 173);
 }
 
@@ -81,10 +85,10 @@ p {
   opacity: 1; /* rendre l'image survolée complètement opaque */
 }
 
- /* projet AS*/
+
+ /* projet qui possède une vidéo*/
 .cadre-video {
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
   max-width: 90%; /* Prend presque toute la largeur de l'écran */
@@ -98,3 +102,12 @@ p {
   height: 100%; /* Remplit entièrement le conteneur */
   display: block;
 }
+
+ /* projet Vaca-meet-Application-Web  et  Vaca-meet-Application-Mobile  */
+.network{margin-top: 2%;}
+
+.network p{font-size: 2vw; margin: 2%; color: #838383;}
+
+.network p span {font-size: 2vw; color: #5f641a;}
+
+.network-image a img{width: 5vw; margin-left: 3%; border-radius: 50% ;}

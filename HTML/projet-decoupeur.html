@@ -15,38 +15,36 @@
   <div class="context">
     <h1>Projet Découpeur XML</h1>
     <h2>Contexte</h2>
-    <p>Un collègue de travail reçoit des fichiers XML de recettes ou de dépenses du département, il doit ensuite les rentrer dans un logiciel de comptabilité.</p>
-    <p>Certains fichiers XML qu'il reçoit comportent beaucoup de balises "PJ" et sont trop volumineux pour le logiciel de comptabilité.</p>
-    <p>Il me demande de lui créer une application pour découper les fichiers XML. </p>
+    <h4>Un collègue de travail reçoit des fichiers XML de recettes ou de dépenses du département, il doit ensuite les rentrer dans un logiciel de comptabilité.<br>
+    Certains fichiers XML qu'il reçoit comportent beaucoup de balises "PJ" et sont trop volumineux pour le logiciel de comptabilité.<br>
+    Il me demande de lui créer une application pour découper les fichiers XML.</h4>
 
     <h2>Les consignes</h2>
-    <p>* Je dois découper le fichier XML en plusieurs parties pour réduire son volume. </p>
-    <p>* Je dois garder une partie "En Tête" En gardant des balises spécifiques.</p>
-    <p>* Ensuite je dois le découper en autant de parties que de balises "PJ".</p>
+    <h4>Je dois découper le fichier XML en plusieurs parties pour réduire son volume.<br>
+    Je dois garder une partie "En Tête" En gardant des balises spécifiques.<br>
+    Ensuite je dois le découper en autant de parties que de balises "PJ".</h4>
   </div>
 
   <div class="image"> 
     <h3>Aperçu de l'interface de l'application </h3>
     <img src="/image/Image_Projet_decoupeur/decoupeur-interface.png" onmouseover="toggleTransparencyOnMouseEnter(this)" onmouseleave="toggleTransparencyOnMouseLeave(this)">
-    <h4>Sur cette interface j'ai mis en place des champs de saisie qui permettent à l'utilisateur de choisir où seront stockés les fichiers découpés.<br>
-     Une fois le fichier à découper selectionné et le répertoire de destination des fichiers découpés choisis, il suffit de cliquer sur le boutton "Découper".</h4>
-    
+   
     <h3>Aperçu du code première partie </h3>
     <img src="/image/Image_Projet_decoupeur/code1.png" onmouseover="toggleTransparencyOnMouseEnter(this)" onmouseleave="toggleTransparencyOnMouseLeave(this)"> 
-    <h4>Dans cette première partie du code j'ai utilisé une expression régulière pour définir si le dossier est une dépense ou un recette.<br>
-    En fonction du résultat de l'expression régulière je passe dans une condition "Si NON". Cela me permet de gérer les "Recettes ou les Dépenses"</h4>
 
     <h3>Aperçu du code deuxième partie </h3>
     <img src="/image/Image_Projet_decoupeur/code2.png"onmouseover="toggleTransparencyOnMouseEnter(this)" onmouseleave="toggleTransparencyOnMouseLeave(this)"> 
-    <h4>J'applique mon algorithme à l'aide de boucles pour effectuer mon découpage selon les consignes données.</h4>
-    
 
     <h3>Aperçu du code troisième partie </h3>
     <img src="/image/Image_Projet_decoupeur/code3.png" onmouseover="toggleTransparencyOnMouseEnter(this)" onmouseleave="toggleTransparencyOnMouseLeave(this)"> 
-    <h4>Une fois mon algorithme fini et mon fichier découpé, je le sauvegarde dans le dossier prédéfini.<br>
-    A la fin de cette partie du code on retrouve la fin de la condition "Si NON" du résultat de mon expression régulière.<br>
-    La suite du code est identique, seul le résultat diffère de la condition de mon expression régulière.</h4>
   </div>
+
+  <div class="cadre-video">
+    <video controls preload="metadata">
+      <source src="/assets/DecoupeurXML.mp4" type="video/mp4">
+    </video>
+  </div>
+  <h4>Vidéo explicative de mon application</h4>
 
   <script src="/js/script_projet.js"></script>
   <script src="/js/comeback.js"></script>

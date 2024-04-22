@@ -27,8 +27,8 @@
           <li><a href="#projet">Projets</a></li>
 		      <li><a href="#veille">Veille</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#C3PO">C3PO</a></li>
-        </ul>
+     <!-- <li><a href="#C3PO">C3PO</a></li> -->
+        </ul> 
       </nav>
     </header>
     <!--End HEADER-->
@@ -106,7 +106,7 @@
       <h1><span class="half-underline">Mes Compétences</span></h1>
     </div>
     <div class="toggle-buttons">
-      <button id="btn-pdf">PDF</button>
+      <button id="btn-pdf">Documents Administratifs E4 et E5</button>
       <button id="btn-tableau">Tableau de mes compétences</button>
   </div>
   <div class="file-list-section" id="file-list-section" style="display:none;">
@@ -338,7 +338,7 @@
       <div class="social">
         <a href="mailto:adrien.pago@gmail.com"><img src="/image/Logo/e-mail.png"></a>
         <a href="https://www.linkedin.com/in/adrien-pago-0642b5249/"><img src="/image/Logo/linkedin.png"></a>
-        <a href="/Milo/index.html"><img src="/assets/question.jpg" alt="Calculateur de jours" title="Calculateur de jours"></a>
+   <!-- <a href="/Milo/index.html"><img src="/assets/question.jpg" alt="Calculateur de jours" title="Calculateur de jours"></a> -->
       </div>
     </footer>   <!--End Footer-->
       

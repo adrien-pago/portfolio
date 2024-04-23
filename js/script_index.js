@@ -39,7 +39,7 @@ if (navbarTimeout) {
 // Définir un nouveau délai pour cacher la navbar
 navbarTimeout = setTimeout(() => {
   navbar.classList.add("hide");
-}, 10000); // 2000 ms = 2 sec
+}, 3000); // 2000 ms = 2 sec
 }
 
 // Ecouter l'événement de défilement de la page
@@ -73,8 +73,6 @@ if (mouseY < 100) {
   hideNavbar();
 }
 });
-
-
 
 
 ////////////////////////////////////////////////
@@ -200,9 +198,6 @@ for (let i = 0; i < filterButtons.length; i++) {
     }
   });
 }
-
-
-
 
 //fonction aggrandir image
 function agrandirImage() {

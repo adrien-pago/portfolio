@@ -1,0 +1,256 @@
+/***************** BASE STYLES **********************/
+html {scroll-behavior: smooth;}
+
+body {
+  margin: 0; /* Pour supprimer les marges par défaut du body */
+  padding: 0; /* Pour supprimer les paddings par défaut du body */
+  min-height: 100vh; /*pour que les autres sections occupe l'espace vide */
+  box-sizing: border-box; /* Pour inclure les paddings et bordures dans la largeur */
+  font-family: "Poppins", sans-serif;
+  overflow-x:  hidden; /* Désactiver le défilement horizontal */
+  flex-direction: column;
+  background-color:   #f5f5f5;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Style pour les titres */
+.section-title{margin-left: 1%;}
+
+/* Style pour souligner la moitié d'un mot */
+.half-underline {position: relative; }
+
+/* Couleur de soulignement, vous pouvez modifier selon vos préférences */ 
+.half-underline::before {content: ""; position: absolute; bottom: 0; left: 0; width: 50%; height: 1px;background-color: #febd01; }
+  
+/* Utilisez la couleur de fond du conteneur pour masquer la seconde moitié du soulignement */
+.half-underline::after {content: ""; position: absolute; bottom: 0; right: 0; width: 50%; height: 1px; background-color: transparent;  }
+  
+/* Style pour le menu burger*/
+.hamburger {display: none; }
+
+#filter-btns {display: flex; list-style-type: none; padding: 0; }
+
+
+
+/*******************  HEADER ********************************/
+.hide {display: none; }
+
+header {transition: opacity 0.5s ease; width: 100vw; height: 5vh; display: flex; position: fixed; 
+    top: 0; left: 0; border-bottom: 1px solid #423940; padding: 0; display: flex; justify-content: space-between; align-items: center;
+    z-index: 100; }
+  
+header.hide { opacity: 0; pointer-events: none;  background-color: #0d6efd; }
+  
+.navbar{ display: flex; height: 5vh; width: 100vw; transition: opacity 0.5s;background-color: #0d6efd;z-index: 2;}
+  
+header .brand-name{margin-left: 3%;align-items: center; display: flex;  height: 100%;}
+  
+header .brand-name a {text-decoration: none; font-size: 2vw; font-weight: 600; color: white; text-transform: uppercase; }
+  
+header.fixed { background-color: rgba(9, 152, 247, 0.5); width: 100vw; color: white; border-color: #eeeeee;  animation: fixHeader 0.5s ease;}
+
+header  ul { display: flex; margin-left: 3%; align-items: center; padding: 0;}
+  
+header  ul li { display: inline-block; margin-left: 2%; }
+  
+header  ul li a { text-decoration: none; font-size: 2.2vw; color: black; text-transform: uppercase;}
+  
+header  ul li a:hover {color: #f1f1f1;}
+  
+header.fixed  ul li a {color: #000000;}
+  
+header.fixed  ul li a:hover { color: #f1f1f1;}
+
+
+/***************** HOME SECTION **********************/
+.home {
+    background-image: url("/image/Image-site-web/Background/background-oréol.jpg");
+    background-size: cover; padding: 0; margin: 0; box-sizing: border-box;}
+  
+.home .home-content {display: flex; flex-wrap: wrap; align-items: center; margin-top: 5%;}
+  
+.home .home-content .block {flex: 0 0 75%; max-width: 75%; margin-left: 3%; margin-top: 3%; border-left: 5px solid white;}
+  
+.home .home-content .block h1 {color: white; font-size: 5vw; font-weight: 600; margin-left: 3%; line-height: 1.2;}
+  
+.home .home-content .block .cv-btn{margin-top: 10%; margin-left: 3%;}
+  
+.home .home-content .block .cv-btn a {border-radius: 4px; color: white; border: 1px solid white;padding: 12px 25px;
+    text-decoration: none; display: inline-block; font-size: 14px; text-transform: uppercase; font-weight: 600; transition: all 0.5s ease;}
+  
+.home .home-content .block .cv-btn a:hover {background-color: white; color: #000000;}
+
+/*logo réseaux sociaux*/
+.medias{display: flex; flex-direction: row; margin-left: 30%; margin-top: 5%;}
+
+.bulle{width: 5vw; height: 5vw; border-radius: 50%; border: 1px solid #f1f1f1; display: flex; justify-content: center;
+  align-items: center; background: #f1f1f1; cursor: pointer; position: relative;margin-right: 3%;overflow: hidden;}
+
+.logo-medias {width: 4vw; height: 4vw; object-fit: contain;}
+/* END logo réseaux sociaux*/
+
+
+/***************** ABOUT SECTION **********************/
+.about-me {background: #f5f5f5; color: #333;}
+
+.about-content {display: flex;}
+
+.about-content img{margin-left: 3%;}
+
+.about-content .text {margin-left: 3%;}
+
+.info-personelle {display: flex; flex-wrap: wrap; align-items: center; }
+
+.info-personelle .list {flex: 1; display: flex;align-items: center; margin-top: 2%; }
+
+.info-personelle p {margin-left: 3%;}
+
+.info-personelle img {margin-left: 3%; width: 30%; height: 30%; border-radius: 50%; object-fit: cover; }
+
+
+/***************** SKILLS SECTION **********************/
+.skill {background: #f5f5f5 ;padding: rem 5%;}
+
+.skill h1 {text-align: left; margin-bottom:20px;}
+
+.tableau-skill table {width:100%; margin-top:20px; border-collapse: collapse;}
+
+.tableau-skill th, .tableau-skill td {border:1px solid #ccc; padding:8px; text-align:left;}
+
+.tableau-skill th {background-color:#0d6efd; color: white;}
+
+/***************** FOOTER **********************/
+footer {background: #0d6efd; color: white; text-align: center; padding: 1rem 0;}
+
+footer a {color: white;}
+
+/***************** RESPONSIVE DESIGN **********************/
+@media (max-width: 768px) {
+    .about-content {flex-direction:column;}
+
+    .about-content .text { padding-left:0; padding-top:1rem;}
+
+    .navbar {flex-direction:column;}
+
+    .navbar ul { flex-direction:column; width:100%;}
+
+    .navbar ul li {text-align:center; padding:10px 0; }
+}
+
+
+/***************** ADDITIONAL STYLES **********************/
+/* Add any specific styles or overrides below */
+
+
+
+/***************** ANIMATION AND DYNAMIC STYLES **********************/
+
+/* Header transitions for hiding and showing on scroll */
+header.fixed {
+    transition: background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent when fixed */
+}
+
+header.hide {
+    top: -100%; /* Move the header out of view */
+    transition: top 0.3s ease-in-out;
+}
+
+/* Fade-in animation setup for GSAP */
+.fade-in {
+    opacity: 0; /* Start with hidden elements for GSAP to animate */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Scale transform for hover effects on clickable elements */
+.inner:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Navbar responsiveness and interactions */
+.hamburger {
+    display: none; /* Start with the hamburger menu hidden */
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+@media (max-width: 991px) {
+    .hamburger {
+        display: block; /* Show hamburger menu in mobile view */
+    }
+
+    .navbar ul {
+        position: absolute;
+        background-color: #fff;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+    }
+
+    .navbar ul.show {
+        display: flex; /* Show menu when hamburger is clicked */
+    }
+
+    .navbar ul li {
+        width: 100%; /* Full width links in mobile menu */
+        text-align: center;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    header {
+        padding: 0.5rem 0; /* Smaller padding for header */
+    }
+
+    .navbar {
+        padding: 0 1rem; /* Smaller padding for navbar */
+    }
+
+    .section-title {
+        font-size: 1.5rem; /* Smaller titles for better readability */
+    }
+
+    .home h1 {
+        font-size: 2rem; /* Smaller home section heading */
+    }
+}
+
+/* Utility classes for visibility toggling */
+.hidden {
+    display: none; /* Utility class to hide elements */
+}
+
+.visible {
+    display: block; /* Utility class to show elements */
+}
+
+/***************** INTERACTIVE ELEMENTS STYLES **********************/
+/* Styles for elements that need to react to user interactions */
+.bulle:hover,
+.btn:hover,
+a.button:hover {
+    filter: brightness(110%);
+    transition: filter 0.3s ease;
+}
+
+/* Styling for active states in navigation or filters */
+.navbar ul li a.active,
+#filter-btn li.active {
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+/* Error handling or feedback messages */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+

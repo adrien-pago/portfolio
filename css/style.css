@@ -324,7 +324,7 @@ tr{font-size: 14px;}
   #showImageBtn {margin-left: 3%; border:none;background-color: rgb(9, 152, 247);color: white;cursor: pointer;}
   
   /* Style pour l'image agrandie */
-  .image-popup {display: none; position: fixed; z-index: 1; left: 2%;top: 7%;width: 90%;height: 90%;overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9); }
+  .image-popup {display: none; position: fixed; z-index: 10000000; left: 2%;top: 7%;width: 90%;height: 90%;overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9); }
   
   /* Style pour la croix de fermeture */
   .close {position: absolute; top: 15px; right: 35px;color: #f1f1f1;font-size: 40px;font-weight: bold;cursor: pointer;}

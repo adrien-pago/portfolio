@@ -1,45 +1,59 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupère les valeurs des champs du formulaire
-    $name = strip_tags(trim($_POST["name"]));
-    $name = str_replace(array("\r","\n"),array(" "," "),$name);
-    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $subject = trim($_POST["subject"]);
-    $message = trim($_POST["message"]);
+require_once __DIR__ . '/vendor/autoload.php';
 
-    // Vérifie que les champs ne sont pas vides
-    if (empty($name) || empty($subject) || empty($email) || empty($message)) {
-        // Si un champ est vide, redirige vers la page du formulaire avec un message d'erreur
-        http_response_code(400);
-        echo "Please fill out all fields.";
-        exit;
-    }
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    // Configure l'adresse e-mail de destination
-    $recipient = "adrien.pago@gmail.com";
+// Paramètres de connexion à la base de données et configuration SMTP
 
-    // Construit le corps du message
-    $email_content = "Name: $name\n";
-    $email_content .= "Email: $email\n\n";
-    $email_content .= "Subject: $subject\n";
-    $email_content .= "Message:\n$message\n";
-
-    // Configure l'en-tête de l'e-mail
-    $email_headers = "From: $name <$email>";
-
-    // Envoie l'e-mail
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
-        // Si l'e-mail est envoyé avec succès, renvoie un message de succès
-        http_response_code(200);
-        echo "Thank You! Your message has been sent.";
-    } else {
-        // Si l'envoi d'e-mail échoue, renvoie un message d'erreur
-        http_response_code(500);
-        echo "Oops! Something went wrong and we couldn't send your message.";
-    }
-} else {
-    // Si la méthode de requête n'est pas POST, renvoie une erreur 403 (forbidden)
-    http_response_code(403);
-    echo "There was a problem with your submission, please try again.";
+// Vérification de la méthode de requête
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+    http_response_code(405);
+    $response_array['status'] = 'error';
+    echo json_encode($response_array);
+    die();
 }
-?>
+
+header('Content-Type: application/json');
+
+// Récupération des données du formulaire
+$name = $_POST['name'];
+$email = $_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
+
+// Création d'une nouvelle instance de PHPMailer
+$mail = new PHPMailer(true);
+
+try {
+    // Configuration SMTP
+    $mail->isSMTP();                                     
+    $mail->Host = 'smtp.ionos.fr';                      
+    $mail->SMTPAuth = true;                              
+    $mail->Username = 'support-technique@vaca-meet.fr'; // Ton adresse e-mail
+    $mail->Password = 'Support-AntiHackMessagerie489?'; // Ton mot de passe
+    $mail->SMTPSecure = 'tls';                           
+    $mail->Port = 587; 
+
+    // Paramètres de l'e-mail
+    $mail->setFrom($email, $name);
+    $mail->addAddress('adrien.pago@gmail.com'); // Adresse e-mail où tu veux recevoir les messages
+    $mail->isHTML(true);
+    $mail->Subject = $subject;
+    $mail->Body    = $message;
+
+    // Envoi de l'e-mail
+    $mail->send();
+
+    // Réponse JSON
+    echo json_encode(['status' => 'success', 'message' => 'Votre message a été envoyé avec succès. Merci!']);
+} catch (Exception $e) {
+    // En cas d'erreur
+    echo json_encode(['status' => 'error', 'message' => 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer plus tard.']);
+}
+
+// $mail->Username = 'temail@adrien-pago-portfolio.fr'; // Ton adresse e-mail
+//$mail->Password = 'asdJflg15@bnv12?dfHHND'; // Ton mot de passe
+
+//    $mail->Username = 'support-technique@vaca-meet.fr'; 
+//$mail->Password = 'Support-AntiHackMessagerie489?';   

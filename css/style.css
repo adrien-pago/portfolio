@@ -104,7 +104,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;}
 #hero p span {color: #fff;padding-bottom: 4px;letter-spacing: 1px;border-bottom: 3px solid #149ddd;}
 
 #hero .cv-btn a {border-radius: 4px; color: white; border: 1px solid white;padding: 12px 25px;
-  text-decoration: none; display: inline-block; font-size: 3vh; text-transform: uppercase; font-weight: 1000; transition: all 0.5s ease;}
+  text-decoration: none; display: inline-block; font-size: 2vh; text-transform: uppercase; font-weight: 1000; transition: all 0.5s ease;}
 
 #hero .cv-btn a:hover {background-color: white; color: #000000;}
 
@@ -114,6 +114,8 @@ h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;}
 }
 
 @media (max-width: 768px) {
+  #hero .hero-container {position: relative;z-index: 2;margin-left: 10%; margin-right: 10%;}
+
   #hero h1 {font-size: 28px;line-height: 36px;}
 
   #hero h2 { font-size: 18px;line-height: 24px;margin-bottom: 30px;}
@@ -137,6 +139,8 @@ section {padding: 60px 0;overflow: hidden;}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.img-fluid{border-radius: 2%; height: -webkit-fill-available;}
+
 .about .content h3 {font-weight: 700;font-size: 26px;color: #173b6c;}
 
 .about .content ul {list-style: none;padding: 0;}
@@ -152,6 +156,10 @@ section {padding: 60px 0;overflow: hidden;}
 .about span {color: #173b6c; font-size: 20px;}
 
 .info-perso{display: flex;}
+
+i.bx{font-size: 3vh;}
+
+i.fas.fa-envelope{font-size: 2.5vh;}
 
 
 /*--------------------------------------------------------------
@@ -173,19 +181,6 @@ section {padding: 60px 0;overflow: hidden;}
 .skill .filter-button ul li.filter-active {color: #149ddd;}
 
 .skill .filter-button ul li li:last-child { margin-right: 0;}
-
-/* Media Query pour les écrans de téléphone */
-@media (max-width: 768px) {
- 
-  .skill .filter-button {display: block; width: 80%; margin-left: 10%; margin-right: 10%; text-align: center; }
-
-  /* Styliser les éléments li pour qu'ils soient affichés en blocs individuels et centrés */
-  .skill .filter-button ul li {display: block; text-align: center; padding: 10px; margin-bottom: 5px; }
-
-  /* Assurer que les titres h1 sont redimensionnés correctement */
-  .tableau h1 {font-size: 6vw; }
-}
-
 
 /*Tableau */
 table {border-collapse: collapse; width: 90%; height: 100%; border: 2px solid black; margin-left: 3%; margin-bottom: 1%;
@@ -216,42 +211,62 @@ tr{font-size: 14px;}
 
 .toggle-buttons button:focus {outline: none; /* Retire le contour lorsqu'on clique sur le bouton */}
 
+/* Media Query pour les écrans de téléphone */
+@media (max-width: 768px) {
+
+  button#btn-pdf{font-size: 2.5vh;}
+
+  button#btn-tableau{font-size: 2.5vh;}
+ 
+  .skill .filter-button {display: block; width: 90%; display:none; }
+
+  /* Styliser les éléments li pour qu'ils soient affichés en blocs individuels et centrés */
+  .skill .filter-button ul li {display: block; text-align: left; padding: 10px; margin-bottom: 5px; }
+
+  /* Assurer que les titres h1 sont redimensionnés correctement */
+  .tableau h1 {font-size: 6vw; }
+}
 
 
 /*--------------------------------------------------------------
 # Projet
 --------------------------------------------------------------*/
+/* Portfolio Section */
 .portfolio .portfolio-item {margin-bottom: 30px;}
 
 .portfolio #portfolio-flters {padding: 0;margin: 0 auto 35px auto;list-style: none;text-align: center;background: #fff;border-radius: 50px;padding: 2px 15px;}
 
-.portfolio #portfolio-flters li {cursor: pointer;display: inline-block;padding: 10px 15px 8px 15px;font-size: 14px;font-weight: 600;line-height: 1;text-transform: uppercase;color: #272829;
-  margin-bottom: 5px;transition: all 0.3s ease-in-out;}
+.portfolio #portfolio-flters li {cursor: pointer;display: inline-block;padding: 10px 15px 8px 15px;font-size: 14px;font-weight: 600;line-height: 1;
+  text-transform: uppercase;color: #272829;margin-bottom: 5px;transition: all 0.3s ease-in-out;}
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {color: #149ddd;}
 
-.portfolio #portfolio-flters li:last-child { margin-right: 0;}
+.portfolio #portfolio-flters li:last-child {margin-right: 0;}
 
-.portfolio .portfolio-wrap {transition: 0.3s;position: relative;overflow: hidden;z-index: 1;} 
+.portfolio .portfolio-wrap {transition: 0.3s;position: relative;overflow: hidden;z-index: 1;}
 
-.portfolio .portfolio-wrap img{max-width: 100%; max-height: 100%;}
+.portfolio .portfolio-wrap img {max-width: 100%;max-height: 100%;}
 
-.portfolio .portfolio-wrap::before {content: "";background: rgba(255, 255, 255, 0.5);position: absolute;left: 0;right: 0;top: 0;bottom: 0;
+.portfolio .portfolio-wrap::before { content: "";background: rgba(0, 0, 0, 0.5);position: absolute;left: 0;right: 0;top: 0;bottom: 0;
   transition: all ease-in-out 0.3s;z-index: 2;opacity: 0;}
 
-.portfolio .portfolio-wrap .portfolio-links {opacity: 1;left: 0;right: 0;bottom: -60px;z-index: 3;position: absolute;transition: all ease-in-out 0.3s;
-  display: flex; justify-content: center;}
+.portfolio .portfolio-wrap .portfolio-links {opacity: 1;left: 0;right: 0;top: 0;bottom: 0;z-index: 3;position: absolute;
+  transition: all ease-in-out 0.3s;display: flex;justify-content: center;align-items: center;background: rgba(0, 0, 0, 0.5);}
 
-.portfolio .portfolio-wrap .portfolio-links a {color: #fff;font-size: 28px;text-align: center;background: rgba(20, 157, 221, 0.75);transition: 0.3s;width: 50%;}
+.portfolio .portfolio-wrap .portfolio-links a { color: #fff;font-size: 28px;text-align: center;background: transparent;transition: 0.3s;
+  width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;}
 
-.portfolio .portfolio-wrap .portfolio-links a:hover {background: rgba(20, 157, 221, 0.95);}
+.portfolio .portfolio-wrap:hover::before {opacity: 1;}
 
-.portfolio .portfolio-wrap .portfolio-links a+a {border-left: 1px solid #37b3ed;}
+.portfolio .portfolio-wrap:hover .portfolio-links {opacity: 1;}
 
-.portfolio .portfolio-wrap:hover::before {top: 0;left: 0;right: 0;bottom: 0;opacity: 1;}
+.portfolio .portfolio-wrap .overlay {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 20px;
+  font-weight: bold;color: white;opacity: 0;transition: opacity 0.3s;z-index: 4;}
 
-.portfolio .portfolio-wrap:hover .portfolio-links { opacity: 1; bottom: 0;}
+.portfolio .portfolio-wrap:hover .overlay {opacity: 1;}
+
+.portfolio .project-title {margin-top: 10px;text-align: center;font-size: 16px;font-weight: bold;}
 
 
 /*--------------------------------------------------------------
